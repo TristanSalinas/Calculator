@@ -1,0 +1,99 @@
+:root {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    width: 100svw;
+    height: 100svh;
+    margin: 0;
+    padding: 0;
+    background-color: #10161c;
+    display: grid;
+    grid-template-rows:  3rem 1fr;
+    justify-items: center;
+    
+    
+    
+}
+
+
+
+
+
+h1 {
+    color: white;
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    padding:  1rem 0.25rem;
+    margin: 0;
+    width: min(100%, 400px);
+    height: min(100%, 550px);
+    align-self: center;
+    border: 2px solid #f5e798;
+    background-color: #6e98dc;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-rows: 150px 1fr;
+}
+
+.display {
+    display: grid;
+    background-color: #a9bbd7;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.display > * {
+    padding-right: 1rem;
+    
+    margin: 0;
+    text-align: right;
+    height: 100%;
+    font-size: 2rem;
+    overflow-y: hidden;   
+}
+
+
+.buttons {
+    display: grid;
+    padding: 1rem 1.5rem;
+    grid-template-areas: 
+    "ac ce divide x"
+    "one two three plus"
+    "four five six minus"
+    "seven eight nine equal"
+    "zero zero point equal";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+    
+    gap: 2px;
+}
+
+.buttons > * {
+    border: none; 
+    border-radius: 60px;
+    
+    transition: background 0.5s ease;
+}
+.buttons > *:hover {
+    background-color: #f0e292;
+
+}
+
+.zero {
+    grid-area: zero;
+}
+
+.equal {
+    grid-area: equal;
+}
+
+.op {
+    background-color: #f5edc3;
+}
